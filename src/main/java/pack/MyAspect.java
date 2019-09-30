@@ -1,5 +1,6 @@
-package pack2;
+package pack;
 
+import java.util.List;
 import java.util.Scanner;
 
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -22,8 +23,8 @@ public class MyAspect {
 		Scanner scanner2 = new Scanner(System.in);
 		String name = scanner2.nextLine();
 		
-		if(!no.equals("aa")) {
-			System.out.println("ID 불일치! 작업을 여기서 종료합니다.");
+		if(!no.equals("1") && !name.equals("김")) {
+			System.out.println("신원이 불확실합니다. 시스템을 종료합니다.");
 			return null;
 		} 
 		
