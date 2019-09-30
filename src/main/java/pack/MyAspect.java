@@ -23,12 +23,13 @@ public class MyAspect {
 		Scanner scanner2 = new Scanner(System.in);
 		String name = scanner2.nextLine();
 		
+		Object object = joinPoint.proceed();
+		
 		if(!no.equals("1") && !name.equals("김")) {
 			System.out.println("신원이 불확실합니다. 시스템을 종료합니다.");
 			return null;
 		} 
 		
-		Object object = joinPoint.proceed();
 		
 		return object;
 	}
